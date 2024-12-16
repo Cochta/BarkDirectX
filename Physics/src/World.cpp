@@ -284,8 +284,8 @@ void World::UpdateQuadTreeCollisions(const QuadNode& node) noexcept
 			return Intersect(circle, std::get<CircleF>(colB.Shape) + GetBody(colB.BodyRef).Position);
 		case ShapeType::Rectangle:
 			return Intersect(circle, std::get<RectangleF>(colB.Shape) + GetBody(colB.BodyRef).Position);
-			/*case ShapeType::Polygon:
-				return Intersect(circle, std::get<PolygonF>(colB.Shape) + GetBody(colB.BodyRef).Position);*/
+			case ShapeType::Polygon:
+				return Intersect(circle, std::get<PolygonF>(colB.Shape) + GetBody(colB.BodyRef).Position);
 		}
 		break;
 	}
